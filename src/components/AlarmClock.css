@@ -1,0 +1,173 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #6dd5ed,
+    #2193b0
+  ); /* Soft blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Alarm Clock Container */
+.alarm-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 440px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Clock Section */
+.clock {
+  margin-bottom: 20px;
+}
+
+.clock img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.clock p {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Set Alarm Section */
+.set-alarm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.alarm-label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.alarm-input {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.alarm-input input {
+  width: 30%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.alarm-input input:focus {
+  outline: none;
+  border: 2px solid #4a98f7; /* Highlight input on focus */
+}
+
+/* Set Alarm Button */
+.set-alarm button {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  background-color: #4a98f7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.set-alarm button:hover {
+  background-color: #357ab7;
+}
+
+/* Ringing Section */
+.ringing {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #ffe6e6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ringing p {
+  font-size: 1.5rem;
+  color: #f44336;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ringing button {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ringing button:hover {
+  background-color: #d32f2f;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .alarm-clock {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .clock img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .clock p {
+    font-size: 1.8rem;
+  }
+
+  .set-alarm button,
+  .ringing button {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+}
